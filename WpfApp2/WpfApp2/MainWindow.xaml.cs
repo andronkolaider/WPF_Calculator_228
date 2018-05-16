@@ -82,6 +82,7 @@ namespace WpfApp2
         private void ButtonNightMode_Click(object sender, RoutedEventArgs e) {
             if ((sender as CheckBox).IsChecked == true) {
                 // це пізда це реально пізда
+                this.Background = new SolidColorBrush(Colors.Gray);
                 
             }
         }
