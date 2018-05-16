@@ -25,5 +25,100 @@ namespace WpfApp2
             InitializeComponent();
         }
 
+        private void ButtonEqual_Click(object sender, RoutedEventArgs e) {
+            string str = TextBoxMain.Text;
+
+            try {
+
+                if (str.Contains('+')) {
+                    int position = str.IndexOf('+');
+                    float firstpart = float.Parse(str.Substring(0, position));
+                    float secondpart = float.Parse(str.Substring(position + 1, str.Length - position - 1));
+                    TextBoxMain.Clear();
+                    TextBoxMain.Text = (firstpart + secondpart).ToString();
+                }
+                if (str.Contains('-')) {
+                    int position = str.IndexOf('-');
+                    float firstpart = float.Parse(str.Substring(0, position));
+                    float secondpart = float.Parse(str.Substring(position + 1, str.Length - position - 1));
+                    TextBoxMain.Clear();
+                    TextBoxMain.Text = (firstpart - secondpart).ToString();
+                }
+                if (str.Contains('*')) {
+                    int position = str.IndexOf('*');
+                    float firstpart = float.Parse(str.Substring(0, position));
+                    float secondpart = float.Parse(str.Substring(position + 1, str.Length - position - 1));
+                    TextBoxMain.Clear();
+                    TextBoxMain.Text = (firstpart * secondpart).ToString();
+                }
+                if (str.Contains('/')) {
+                    int position = str.IndexOf('/');
+                    float firstpart = float.Parse(str.Substring(0, position));
+                    float secondpart = float.Parse(str.Substring(position + 1, str.Length - position - 1));
+                    TextBoxMain.Clear();
+
+                    if (secondpart == 0 || firstpart == 0)
+                        throw new Exception("Dividing by zero");
+                    
+                    TextBoxMain.Text = (firstpart / secondpart).ToString();
+                }
+
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            TextBoxMain.Text += (sender as Button).Content;
+        }
+
+        private void ButtonClear_Click(object sender, RoutedEventArgs e) {
+            TextBoxMain.Clear();
+        }
+
+        private void ButtonNightMode_Click(object sender, RoutedEventArgs e) {
+            if ((sender as CheckBox).IsChecked == true) {
+                // це пізда це реально пізда
+                this.Background = new SolidColorBrush(Colors.Gray);
+                
+            }
+        }
+
+        private void ButtonAbs_Click(object sender, RoutedEventArgs e) {
+            
+            try {
+
+                if (TextBoxMain.Text.Length > 0) {
+                    TextBoxMain.Text = Math.Sqrt(double.Parse(TextBoxMain.Text)).ToString();
+                }
+                else {
+                    throw new Exception("Empty field");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void ButtonPow_Click(object sender, RoutedEventArgs e) {
+            
+            try {
+
+                if (TextBoxMain.Text.Length > 0) {
+                    TextBoxMain.Text = Math.Pow(double.Parse(TextBoxMain.Text), (double)2).ToString();
+                }
+                else {
+                    throw new Exception("Empty field");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }
