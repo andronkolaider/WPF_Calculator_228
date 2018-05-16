@@ -60,7 +60,7 @@ namespace WpfApp2
                     if (secondpart == 0 || firstpart == 0)
                         throw new Exception("Dividing by zero");
                     
-                    TextBoxMain.Text = (firstpart + secondpart).ToString();
+                    TextBoxMain.Text = (firstpart / secondpart).ToString();
                 }
 
 
@@ -69,6 +69,55 @@ namespace WpfApp2
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            TextBoxMain.Text += (sender as Button).Content;
+        }
+
+        private void ButtonClear_Click(object sender, RoutedEventArgs e) {
+            TextBoxMain.Clear();
+        }
+
+        private void ButtonNightMode_Click(object sender, RoutedEventArgs e) {
+            if ((sender as CheckBox).IsChecked == true) {
+                // це пізда це реально пізда
+                
+            }
+        }
+
+        private void ButtonAbs_Click(object sender, RoutedEventArgs e) {
+            
+            try {
+
+                if (TextBoxMain.Text.Length > 0) {
+                    TextBoxMain.Text = Math.Sqrt(double.Parse(TextBoxMain.Text)).ToString();
+                }
+                else {
+                    throw new Exception("Empty field");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void ButtonPow_Click(object sender, RoutedEventArgs e) {
+            
+            try {
+
+                if (TextBoxMain.Text.Length > 0) {
+                    TextBoxMain.Text = Math.Pow(double.Parse(TextBoxMain.Text), (double)2).ToString();
+                }
+                else {
+                    throw new Exception("Empty field");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
