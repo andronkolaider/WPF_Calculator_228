@@ -27,22 +27,13 @@ namespace WpfApp2
             InitializeComponent();
         }
         private void NightModeButtons(bool colorDay)
-        {
-            /// casting the content into panel
+        { 
             Panel mainContainer = (Panel)this.Content;
-
-            /// GetAll UIElement
             UIElementCollection element = mainContainer.Children;
-
-            /// casting the UIElementCollection into List
             List<FrameworkElement> lstElement = element.Cast<FrameworkElement>().ToList();
-
-            /// Geting all Control from list
             var lstControl = lstElement.OfType<Control>();
-
             foreach (Control contol in lstControl)
             {
-                ///Hide all Controls
                 if(contol is Button && colorDay==true)
                 {
                     (contol as Button).Background = new SolidColorBrush(Colors.LightSlateGray);
@@ -56,7 +47,6 @@ namespace WpfApp2
         }
         private void ButtonEqual_Click(object sender, RoutedEventArgs e) {
             string str = TextBoxMain.Text;
-
             try {
 
                 if (str.Contains('+')) {
@@ -142,10 +132,9 @@ namespace WpfApp2
             
         }
 
-        private void ButtonPow_Click(object sender, RoutedEventArgs e) {
-            
+        private void ButtonPow_Click(object sender, RoutedEventArgs e)
+        {
             try {
-
                 if (TextBoxMain.Text.Length > 0) {
                     TextBoxMain.Text = Math.Pow(double.Parse(TextBoxMain.Text), (double)2).ToString();
                 }
@@ -156,11 +145,6 @@ namespace WpfApp2
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
-            
-        }
-
-        private void TextBoxMain_TextChanged(object sender, TextChangedEventArgs e) {
-
         }
     }
 }
