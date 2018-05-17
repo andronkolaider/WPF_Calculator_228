@@ -49,6 +49,6 @@
         <Button x:Name="ButtonClear" Grid.Row="1" Grid.Column="1" Margin="5" Content="C" FontSize="15" Background="WhiteSmoke" Click="ButtonClear_Click"/>
         <CheckBox x:Name="ButtonNightMode" HorizontalAlignment="Right" Margin="0,10,0,101" Grid.ColumnSpan="2" Width="86" Content="Night Mode" Click="ButtonNightMode_Click"/>
         <!--Ночний режим-->
-        <TextBox x:Name="TextBoxMain" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Margin="10,50,10,50" FontSize="20" TextAlignment="Right"/>
+        <TextBox x:Name="TextBoxMain" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Margin="10,50,10,50" FontSize="20" TextAlignment="Right" TextChanged="TextBoxMain_TextChanged"/>
     </Grid>
 </Window>

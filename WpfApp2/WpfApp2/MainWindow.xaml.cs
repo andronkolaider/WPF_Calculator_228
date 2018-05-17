@@ -120,5 +120,9 @@ namespace WpfApp2
             }
             
         }
+
+        private void TextBoxMain_TextChanged(object sender, TextChangedEventArgs e) {
+
+        }
     }
 }
