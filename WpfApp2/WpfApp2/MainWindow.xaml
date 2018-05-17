@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Calculator 228" Height="425.358" Width="335.452"
+        Title="Calculator 228" Height="420" Width="350"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
         Background="LightGray"
