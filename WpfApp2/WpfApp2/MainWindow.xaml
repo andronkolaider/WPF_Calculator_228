@@ -9,7 +9,7 @@
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
         Background="LightGray"
-       
+        Name="mainWindow"
         >
     <Grid>
         <Grid.RowDefinitions>
@@ -29,7 +29,8 @@
             <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" Content="0" FontSize="15" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Margin="5" Content="0" FontSize="15" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="5" Content="." FontSize="20" Background="WhiteSmoke" Click="Button_Click"/>
         <Button x:Name="ButtonEqual" Grid.Row="5" Grid.Column="4" Margin="5" Grid.ColumnSpan="2" Content="=" FontSize="20" Background="WhiteSmoke" Click="ButtonEqual_Click"/>
         <Button Grid.Row="4" Grid.Column="1" Margin="5" Content="1" Background="WhiteSmoke" Click="Button_Click"/>
         <Button Grid.Row="4" Grid.Column="2" Margin="5" Content="2" Background="WhiteSmoke" Click="Button_Click" Grid.ColumnSpan="2"/>

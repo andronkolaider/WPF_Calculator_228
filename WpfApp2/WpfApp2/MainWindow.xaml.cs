@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace WpfApp2
 {
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -24,7 +26,34 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+        private void NightModeButtons(bool colorDay)
+        {
+            /// casting the content into panel
+            Panel mainContainer = (Panel)this.Content;
 
+            /// GetAll UIElement
+            UIElementCollection element = mainContainer.Children;
+
+            /// casting the UIElementCollection into List
+            List<FrameworkElement> lstElement = element.Cast<FrameworkElement>().ToList();
+
+            /// Geting all Control from list
+            var lstControl = lstElement.OfType<Control>();
+
+            foreach (Control contol in lstControl)
+            {
+                ///Hide all Controls
+                if(contol is Button && colorDay==true)
+                {
+                    (contol as Button).Background = new SolidColorBrush(Colors.LightSlateGray);
+                    
+                }
+                else if(contol is Button && colorDay == false)
+                {
+                    (contol as Button).Background = new SolidColorBrush(Colors.White);
+                }
+            }
+        }
         private void ButtonEqual_Click(object sender, RoutedEventArgs e) {
             string str = TextBoxMain.Text;
 
@@ -82,8 +111,13 @@ namespace WpfApp2
         private void ButtonNightMode_Click(object sender, RoutedEventArgs e) {
             if ((sender as CheckBox).IsChecked == true) {
                 // це пізда це реально пізда
-                this.Background = new SolidColorBrush(Colors.Gray);
-                
+                this.Background = new SolidColorBrush(Colors.Black);
+                NightModeButtons(true);
+            }
+            else
+            {
+                this.Background = new SolidColorBrush(Colors.LightGray);
+                NightModeButtons(false);
             }
         }
 
