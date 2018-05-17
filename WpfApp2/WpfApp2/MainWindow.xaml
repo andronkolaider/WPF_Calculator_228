@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Calculator 228" Height="425.358" Width="335.452"
+        Title="Calculator 228" Height="425" Width="335"
         WindowStyle="ToolWindow"
-        ResizeMode="NoResize"
+        MinHeight="425"
+        MinWidth="335"
         Background="LightGray"
         Name="mainWindow"
         >
@@ -45,7 +46,7 @@
         <Button Grid.Row="2" Grid.Column="4" Margin="5" Content="-" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
         <Button Grid.Row="3" Grid.Column="4" Margin="5" Content="*" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
         <Button Grid.Row="4" Grid.Column="4" Margin="5" Content="/" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
-        <Button x:Name="ButtonAbs" Grid.Row="1" Grid.Column="2" Margin="5,5,5,0" Content="√" FontSize="20" Background="WhiteSmoke" Click="ButtonAbs_Click" Height="42" VerticalAlignment="Top" />
+        <Button x:Name="ButtonAbs" Grid.Row="1" Grid.Column="2" Margin="5" Content="√" FontSize="20" Background="WhiteSmoke" Click="ButtonAbs_Click" />
         <Button x:Name="ButtonPow" Grid.Row="1" Grid.Column="3" Margin="5" Content="^" FontSize="20" Background="WhiteSmoke" Click="ButtonPow_Click"/>
         <Button x:Name="ButtonClear" Grid.Row="1" Grid.Column="1" Margin="5" Content="C" FontSize="15" Background="WhiteSmoke" Click="ButtonClear_Click"/>
         <CheckBox x:Name="ButtonNightMode" HorizontalAlignment="Right" Margin="0,10,0,101" Grid.ColumnSpan="2" Width="86" Content="Night Mode" Click="ButtonNightMode_Click"/>
