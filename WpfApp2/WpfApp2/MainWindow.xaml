@@ -9,7 +9,7 @@
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
         Background="LightGray"
-       
+        Name="mainWindow"
         >
     <Grid>
         <Grid.RowDefinitions>
@@ -23,29 +23,30 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="13*"/>
+
             <ColumnDefinition Width="56*"/>
             <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" Content="0" FontSize="15" Background="WhiteSmoke" Click="Button_Click"/>
-        <Button x:Name="ButtonEqual" Grid.Row="5" Grid.Column="4" Margin="5" Grid.ColumnSpan="2" Content="=" FontSize="20" Background="WhiteSmoke" Click="ButtonEqual_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" Margin="5" Content="0" FontSize="15" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="5" Grid.Column="2"  Margin="5" Content="." FontSize="20" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button x:Name="ButtonEqual" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="5"  Content="=" FontSize="20" Background="WhiteSmoke" Click="ButtonEqual_Click"/>
         <Button Grid.Row="4" Grid.Column="1" Margin="5" Content="1" Background="WhiteSmoke" Click="Button_Click"/>
-        <Button Grid.Row="4" Grid.Column="2" Margin="5" Content="2" Background="WhiteSmoke" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Button Grid.Row="4" Grid.Column="4" Margin="5" Content="3" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="4" Grid.Column="2" Margin="5" Content="2" Background="WhiteSmoke" Click="Button_Click" />
+        <Button Grid.Row="4" Grid.Column="3" Margin="5" Content="3" Background="WhiteSmoke" Click="Button_Click"/>
         <Button Grid.Row="3" Grid.Column="1" Margin="5" Content="4" Background="WhiteSmoke" Click="Button_Click"/>
-        <Button Grid.Row="3" Grid.Column="2" Margin="5" Content="5" Background="WhiteSmoke" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Button Grid.Row="3" Grid.Column="4" Margin="5" Content="6" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="3" Grid.Column="2" Margin="5" Content="5" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="3" Grid.Column="3" Margin="5" Content="6" Background="WhiteSmoke" Click="Button_Click"/>
         <Button Grid.Row="2" Grid.Column="1" Margin="5" Content="7" Background="WhiteSmoke" Click="Button_Click"/>
-        <Button Grid.Row="2" Grid.Column="2" Margin="5" Content="8" Background="WhiteSmoke" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Button Grid.Row="2" Grid.Column="4" Margin="5" Content="9" Background="WhiteSmoke" Click="Button_Click"/>
-        <Button Grid.Row="1" Grid.Column="5" Margin="5" Content="+" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
-        <Button Grid.Row="2" Grid.Column="5" Margin="5" Content="-" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
-        <Button Grid.Row="3" Grid.Column="5" Margin="5" Content="*" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
-        <Button Grid.Row="4" Grid.Column="5" Margin="5" Content="/" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
-        <Button x:Name="ButtonAbs" Grid.Row="1" Grid.Column="2" Margin="5,5,5,0" Content="√" FontSize="20" Background="WhiteSmoke" Click="ButtonAbs_Click" Height="42" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button x:Name="ButtonPow" Grid.Row="1" Grid.Column="4" Margin="5" Content="^" FontSize="20" Background="WhiteSmoke" Click="ButtonPow_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Margin="5" Content="8" Background="WhiteSmoke" Click="Button_Click" />
+        <Button Grid.Row="2" Grid.Column="3" Margin="5" Content="9" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Grid.Row="1" Grid.Column="4" Margin="5" Content="+" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="4" Margin="5" Content="-" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
+        <Button Grid.Row="3" Grid.Column="4" Margin="5" Content="*" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
+        <Button Grid.Row="4" Grid.Column="4" Margin="5" Content="/" Background="WhiteSmoke" FontSize="20" Click="Button_Click"/>
+        <Button x:Name="ButtonAbs" Grid.Row="1" Grid.Column="2" Margin="5,5,5,0" Content="√" FontSize="20" Background="WhiteSmoke" Click="ButtonAbs_Click" Height="42" VerticalAlignment="Top" />
+        <Button x:Name="ButtonPow" Grid.Row="1" Grid.Column="3" Margin="5" Content="^" FontSize="20" Background="WhiteSmoke" Click="ButtonPow_Click"/>
         <Button x:Name="ButtonClear" Grid.Row="1" Grid.Column="1" Margin="5" Content="C" FontSize="15" Background="WhiteSmoke" Click="ButtonClear_Click"/>
         <CheckBox x:Name="ButtonNightMode" HorizontalAlignment="Right" Margin="0,10,0,101" Grid.ColumnSpan="2" Width="86" Content="Night Mode" Click="ButtonNightMode_Click"/>
         <!--Ночний режим-->
