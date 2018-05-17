@@ -113,11 +113,15 @@ namespace WpfApp2
                 // це пізда це реально пізда
                 this.Background = new SolidColorBrush(Colors.Black);
                 NightModeButtons(true);
+                (sender as CheckBox).Foreground = new SolidColorBrush(Colors.LightSlateGray);
+                TextBoxMain.Background = new SolidColorBrush(Colors.LightSlateGray);
             }
             else
             {
+                TextBoxMain.Background = new SolidColorBrush(Colors.White);
                 this.Background = new SolidColorBrush(Colors.LightGray);
                 NightModeButtons(false);
+                (sender as CheckBox).Foreground = new SolidColorBrush(Colors.Black);
             }
         }
 
